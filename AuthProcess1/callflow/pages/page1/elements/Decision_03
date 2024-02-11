@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@764542112:1697796183083" name="Decision_03" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="Decision_03" default_exit_state="No">
+        <exit_state name="Yes" conjugate="and">
+            <number operator="less">
+                <data>
+                    <session name="retry" />
+                </data>
+                <constant_number value="2" />
+            </number>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

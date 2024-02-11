@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@2018876842:1697191476057" name="page1" version="6.0.1">
+<element height="46" id="Element@1997032092:1697191476057" name="Start Of Call" start_of_call="true" type="Page Entry" width="113" x="292" y="1">
+<exit_states>
+<exit_state name="next" target="Element@1561290656:1697191670044"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1561290656:1697191670044" name="CVP Subdialog Start_01" src="com.audium.server.voiceElement.internal.CiscoSubdialogStartElement" type="Subdialog Start" width="172" x="262" y="77">
+<exit_states>
+<exit_state name="done" target="Element@1521602834:1697191715741"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1521602834:1697191715741" name="Init" src="com.audium.server.action.context.ApplicationModifier" type="Action Element" width="178" x="259" y="157">
+<exit_states>
+<exit_state name="done" target="Element@279256923:1697191826782"/>
+</exit_states>
+</element>
+<element height="46" id="Element@279256923:1697191826782" name="CheckLocalOrOverseas" type="Decision" width="171" x="265" y="243">
+<exit_states>
+<exit_state name="Overseas" target="Element@709258840:1697192907373"/>
+<exit_state name="Local(HK)" target="Element@1463593300:1697192592226"/>
+<exit_state name="NoNumberRecognized" target="Element@1475446246:1697192982139"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1463593300:1697192592226" name="HkAudio" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="99" x="91" y="376">
+<exit_states>
+<exit_state name="done" target="Element@1276805519:1697440690875">
+<bendpoint>
+<dim1 x="170" y="183"/>
+<dim2 x="-167" y="-104"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="46" id="Element@709258840:1697192907373" name="OverseasAudio" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="129" x="288" y="367">
+<exit_states>
+<exit_state name="done" target="Element@1276805519:1697440690875">
+<bendpoint>
+<dim1 x="10" y="147"/>
+<dim2 x="-115" y="-149"/>
+</bendpoint>
+<bendpoint>
+<dim1 x="44" y="207"/>
+<dim2 x="-111" y="-96"/>
+</bendpoint>
+<bendpoint>
+<dim1 x="90" y="255"/>
+<dim2 x="-35" y="-41"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="46" id="Element@1475446246:1697192982139" name="NoNumberAudio" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="142" x="516" y="371">
+<exit_states>
+<exit_state name="done" target="Element@561820664:1697434109933"/>
+</exit_states>
+</element>
+<element height="46" id="Element@561820664:1697434109933" name="Decision_02" type="Decision" width="112" x="532" y="480">
+<exit_states>
+<exit_state name="true" target="Element@1624421807:1697440556905"/>
+<exit_state name="No" target="Element@97341230:1697440581234"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1624421807:1697440556905" name="Audio_01" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="99" x="441" y="574">
+<exit_states>
+<exit_state name="done" target="Element@1276805519:1697440690875"/>
+</exit_states>
+</element>
+<element height="46" id="Element@97341230:1697440581234" name="Audio_02" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="99" x="650" y="575">
+<exit_states>
+<exit_state name="done" target="Element@1276805519:1697440690875"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1276805519:1697440690875" name="CVP Subdialog Return_01" src="com.audium.server.voiceElement.internal.CiscoSubdialogReturnElement" type="Subdialog Return" width="183" x="416" y="670">
+<exit_states>
+<exit_state name="done"/>
+</exit_states>
+</element>
+</page>

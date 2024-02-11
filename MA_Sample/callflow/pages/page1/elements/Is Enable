@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@403970501:1694456781359" name="Is Enable" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="Is Enable" default_exit_state="Agent_Transfer">
+        <exit_state name="END" conjugate="and">
+            <number operator="equal">
+                <constant_number value="1" />
+                <constant_number value="1" />
+            </number>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

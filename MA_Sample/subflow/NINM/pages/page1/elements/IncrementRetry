@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@530535694:1694587719571" name="IncrementRetry" version="6.0.1">
+<config>
+<log>
+<data create_when="After" name="retry">{Data.Session.s_retry}</data>
+</log>
+<settings>
+<setting name="type">Session</setting>
+<setting name="name">retry</setting>
+<setting name="expression">{Data.Session.retry}+1</setting>
+</settings>
+<session_data>
+<data create_when="Before" name="NINM">NI</data>
+</session_data>
+</config>
+</action_element>

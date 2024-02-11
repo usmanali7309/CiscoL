@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@736936164:1697608029881" name="CheckCustomerInput" version="6.0.1">
+<config>
+<source type="Class">com.test.CheckInputFromCustomer</source>
+</config>
+</decision>

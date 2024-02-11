@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@1825556251:1692170001798" name="DB_CSO_InsertNM" version="6.0.1">
+<config>
+<settings>
+<setting name="type">insert</setting>
+<setting name="jndiName">{Data.Session.dbJNDIResName}</setting>
+<setting name="query">INSERT INTO [dbo].[TBL_IVRMenuReport]
+    
+ ([uniqueid]
+           ,
+  [offertime]
+           ,
+  [menuid]
+            ,
+  [inputdata]
+          ,
+[numberoftries])
+     VALUES         
+  ('{Data.Session.callid}',getdate(),'{Data.Session.menuID}','Invalid','{Data.Session.retry}')</setting>
+<setting name="enableXmlResultSet">true</setting>
+<setting name="maxRowsInXML">50</setting>
+</settings>
+<session_data>
+<data create_when="Before" name="NINM">NM</data>
+</session_data>
+</config>
+</action_element>

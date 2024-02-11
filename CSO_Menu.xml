@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
+<!-- NM- Next Menu , AN - Ann, AT - AgentTransfer, DC- Disconnect -->
+<DynamicMenu>
+	    <Entry>
+            <Key>MM</Key>
+            <Value>
+                <Prompts bargein="true">SG_CC_CSO_MENU</Prompts>
+                <Grammars>1,2,3,4,5,6</Grammars>
+                <NextNode>NM:IBCSO,NM:CCSCO,NM:DADCSO,NM:IICSO,NM:CLCSO,AN:CORPORATE_PROMPT_PH</NextNode>
+                <MenuID>M0076</MenuID>
+				<NoInput>SG_CC_NINM_NOINPUT</NoInput>
+				<NoMatch>SG_CC_NINM_NOMATCH</NoMatch>
+				<MaxTries NextNode="SF:Disconnect">SG_CC_NINM_MAXTRY</MaxTries>         				
+				<Retry>3</Retry>
+            </Value>
+        </Entry>
+		
+		<Entry>
+            <Key>IBCSO</Key>
+            <Value>
+                <Prompts bargein="true">SG_CC_IBCSO_MENU</Prompts>
+                <Grammars>1,2</Grammars>
+                <NextNode>AN:DIGITOKEN_PROMPT_PH,AN:IB_PIN_ReseT</NextNode>
+                <MenuID>M0077</MenuID>             
+				<NoInput>AT:CT|PQ</NoInput>
+				<NoMatch>SG_CC_NINM_NOMATCH</NoMatch>
+				<MaxTries NextNode="AN:Disconnect">SG_CC_NINM_MAXTRY</MaxTries>         				
+				<Retry>3</Retry>
+            </Value>
+        </Entry>
+		
+		<Entry>
+            <Key>CCSCO</Key>
+            <Value>
+                <Prompts bargein="true">SG_CC_CCCSO_MENU</Prompts>
+                <Grammars>1,2,3</Grammars>
+                <NextNode>AT:SG_CBG_CCTR_LANG_IPO|SG_CBG_CCTR_LANG_IPO,NM:CCCSO_MENU,AN:eStatements</NextNode>
+                <MenuID>M0078</MenuID>             
+				<NoInput>AT:CT|PQ</NoInput>
+				<NoMatch>SG_CC_NINM_NOMATCH</NoMatch>
+				<MaxTries NextNode="AN:Disconnect">SG_CC_NINM_MAXTRY</MaxTries>         				
+				<Retry>3</Retry>
+            </Value>
+        </Entry>
+		
+		<Entry>
+            <Key>CCCSO_MENU</Key>
+            <Value>
+                <Prompts bargein="true">SG_CC_CCCSO_MENU_1</Prompts>
+                <Grammars>1,2</Grammars>
+                <NextNode>AN:OverseasActivation,AN:Cardactivation</NextNode>
+                <MenuID>M0079</MenuID>             
+				<NoInput>SG_CC_NINM_NOINPUT</NoInput>
+				<NoMatch>SG_CC_NINM_NOMATCH</NoMatch>
+				<MaxTries NextNode="AN:Disconnect">SG_CC_NINM_MAXTRY</MaxTries>         				
+				<Retry>3</Retry>
+            </Value>
+        </Entry>
+		
+		<Entry>
+            <Key>DADCSO</Key>
+            <Value>
+                <Prompts bargein="true">SG_CC_DADCSO_MENU</Prompts>
+                <Grammars>1,2,3</Grammars>
+                <NextNode>AT:SG_CBG_CCTR_LANG_IPO|SG_CBG_CCTR_LANG_IPO,NM:DADCSO_MENU,AN:eStatements</NextNode>
+                <MenuID>M0080</MenuID>             
+				<NoInput>AT:CT|PQ</NoInput>
+				<NoMatch>SG_CC_NINM_NOMATCH</NoMatch>
+				<MaxTries NextNode="AN:Disconnect">SG_CC_NINM_MAXTRY</MaxTries>         				
+				<Retry>3</Retry>
+            </Value>
+        </Entry>
+		
+		<Entry>
+            <Key>DADCSO_MENU</Key>
+            <Value>
+                <Prompts bargein="true">SG_CC_CCCSO_MENU_1</Prompts>
+                <Grammars>1,2</Grammars>
+                <NextNode>AN:OverseasActivation,AN:Cardactivation</NextNode>
+                <MenuID>M0081</MenuID>             
+				<NoInput>SG_CC_NINM_NOINPUT</NoInput>
+				<NoMatch>SG_CC_NINM_NOMATCH</NoMatch>
+				<MaxTries NextNode="AN:Disconnect">SG_CC_NINM_MAXTRY</MaxTries>         				
+				<Retry>3</Retry>
+            </Value>
+        </Entry>
+		
+		<Entry>
+            <Key>IICSO</Key>
+            <Value>
+                <Prompts bargein="true">SG_CC_IICSO_MENU</Prompts>
+                <Grammars>1</Grammars>
+                <NextNode>NM:IICSO_MENU</NextNode>
+                <MenuID>M0082</MenuID>             
+				<NoInput>AT:SG_CBG_CCTR_LANG_IPO|SG_CBG_CCTR_LANG_IPO</NoInput>
+				<NoMatch>SG_CC_NINM_NOMATCH</NoMatch>
+				<MaxTries NextNode="AN:Disconnect">SG_CC_NINM_MAXTRY</MaxTries>         				
+				<Retry>3</Retry>
+            </Value>
+        </Entry>
+		
+		<Entry>
+            <Key>IICSO_MENU</Key>
+            <Value>
+                <Prompts bargein="true">SG_CC_IICSO_MENU_1</Prompts>
+                <Grammars>1</Grammars>
+                <NextNode>AN:SG_CC_IICSO_VOICE_BIO</NextNode>
+                <MenuID>M0083</MenuID>             
+				<NoInput>AT:CT|PQ</NoInput>
+				<NoMatch>SG_CC_NINM_NOMATCH</NoMatch>
+				<MaxTries NextNode="AN:Disconnect">SG_CC_NINM_MAXTRY</MaxTries>         				
+				<Retry>3</Retry>
+            </Value>
+        </Entry>
+		
+		<Entry>
+            <Key>CLCSO</Key>
+            <Value>
+                <Prompts bargein="true">SG_CC_DADCSO_MENU</Prompts>
+                <Grammars>1,2,3</Grammars>
+                <NextNode>AT:SG_CBG_CCTR_LANG_IPO|SG_CBG_CCTR_LANG_IPO,NM:CLCSO_MENU,AN:eStatements</NextNode>
+                <MenuID>M0084</MenuID>             
+				<NoInput>AT:CT|PQ</NoInput>
+				<NoMatch>SG_CC_NINM_NOMATCH</NoMatch>
+				<MaxTries NextNode="AN:Disconnect">SG_CC_NINM_MAXTRY</MaxTries>         				
+				<Retry>3</Retry>
+            </Value>
+        </Entry>
+		
+		<Entry>
+            <Key>CLCSO_MENU</Key>
+            <Value>
+                <Prompts bargein="true">SG_CC_CCCSO_MENU_1</Prompts>
+                <Grammars>1,2</Grammars>
+                <NextNode>AN:OverseasActivation,AN:Cardactivation</NextNode>
+                <MenuID>M0085</MenuID>             
+				<NoInput>SG_CC_NINM_NOINPUT</NoInput>
+				<NoMatch>SG_CC_NINM_NOMATCH</NoMatch>
+				<MaxTries NextNode="AN:Disconnect">SG_CC_NINM_MAXTRY</MaxTries>         				
+				<Retry>3</Retry>
+            </Value>
+        </Entry>
+</DynamicMenu>

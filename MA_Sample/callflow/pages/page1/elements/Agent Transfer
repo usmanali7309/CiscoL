@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<subdialog_return id="Element@270083011:1694456688274" name="Agent Transfer" version="6.0.1">
+<config>
+<settings>
+<setting name="caller_input">End</setting>
+<setting name="FromExtVXML0"/>
+<setting name="FromExtVXML1"/>
+<setting name="FromExtVXML2"/>
+<setting name="FromExtVXML3"/>
+</settings>
+</config>
+</subdialog_return>

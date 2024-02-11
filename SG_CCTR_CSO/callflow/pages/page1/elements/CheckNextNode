@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@415046985:1692178151407" name="CheckNextNode" version="6.0.1">
+<config>
+<source type="Class">com.dydbs.endpoint.CheckNextNode</source>
+</config>
+</decision>

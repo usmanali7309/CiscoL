@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
+<!-- NM- Next Menu , AN - Ann, AT - AgentTransfer, DC- Disconnect -->
+<DynamicAnn>
+        <Entry>
+            <Key>CORPORATE_PROMPT_PH</Key>
+            <Value>
+                <Prompts bargein="true">CORPORATE_PROMPT_PH</Prompts>
+                <NextNode>AT:SG_CBG_CCTR_LANG_IPO|SG_CBG_CCTR_LANG_IPO</NextNode>
+	        </Value>
+        </Entry>
+	
+		<Entry>
+            <Key>DIGITOKEN_PROMPT_PH</Key>
+            <Value>
+                <Prompts bargein="true">DIGITOKEN_PROMPT_PH</Prompts>
+                <NextNode>AT:SG_CBG_CCTR_LANG_IPO|SG_CBG_CCTR_LANG_IPO</NextNode>
+            </Value>
+        </Entry>
+		
+		<Entry>
+            <Key>SG_CC_IICSO_VOICE_BIO</Key>
+            <Value>
+                <Prompts bargein="true">SG_CC_IICSO_VOICE_BIO</Prompts>
+                <NextNode>AT:SG_CBG_CCTR_LANG_IPO|SG_CBG_CCTR_LANG_IPO</NextNode>
+            </Value>
+        </Entry>
+		<Entry>
+            <Key>OverseasActivation</Key>
+            <Value>
+                <Prompts bargein="true">SG_CC_CCCSO_OA</Prompts>
+                <NextNode>DC</NextNode>
+            </Value>
+        </Entry>
+		
+		<Entry>
+            <Key>Cardactivation</Key>
+            <Value>
+                <Prompts bargein="true">SG_CC_CCCSO_CA</Prompts>
+                <NextNode>DC</NextNode>
+            </Value>
+        </Entry>
+		
+		<Entry>
+            <Key>IB_PIN_ReseT</Key>
+            <Value>
+                <Prompts bargein="true">SG_CC_IBCSO_PIN_SET</Prompts>
+                <NextNode>DC</NextNode>
+            </Value>
+        </Entry>
+		
+		<Entry>
+            <Key>eStatements</Key>
+            <Value>
+                <Prompts bargein="true">SG_CC_CCCSO_ES</Prompts>
+                <NextNode>DC</NextNode>
+            </Value>
+        </Entry>
+</DynamicAnn>

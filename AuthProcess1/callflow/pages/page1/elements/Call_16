@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<connector id="Element@1782098932:1697796873752" name="Call_16" version="6.0.1">
+<subflow_call subflow_name="AT" target="Element@31:1697796888420">
+<config>
+<input_data>
+<data name="duration"/>
+</input_data>
+</config>
+</subflow_call>
+</connector>

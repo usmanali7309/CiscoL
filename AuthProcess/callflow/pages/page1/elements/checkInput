@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@818622640:1697454270573" name="checkInput" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="checkInput" default_exit_state="NINM">
+        <exit_state name="valid" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <element name="NoNumberAudio" variable="value" />
+                </data>
+                <constant_string value="*" />
+            </string>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

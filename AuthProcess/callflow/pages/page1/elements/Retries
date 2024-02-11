@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@1794801498:1697007494523" name="Retries" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="Retries" default_exit_state="maxTry">
+        <exit_state name="No" conjugate="and">
+            <number operator="less">
+                <data>
+                    <session name="count" />
+                </data>
+                <constant_number value="2" />
+            </number>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

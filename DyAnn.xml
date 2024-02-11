@@ -1,0 +1,36 @@
+<DynamicAnn>
+        <Entry>
+            <Key>Sale_Id</Key>
+            <Value>
+                <Prompts bargein="true">Sale_Id</Prompts>
+                <NextNode>AT:AT_PRO</NextNode>
+	        </Value>
+        </Entry>
+	
+		<Entry>
+            <Key>Complain_Id</Key>
+            <Value>
+                <Prompts bargein="true">Complain_Id</Prompts>
+                <NextNode>AT:AT_PRO</NextNode>
+            </Value>
+        </Entry>
+		
+		<Entry>
+            <Key>Support_Id</Key>
+            <Value>
+                <Prompts bargein="true">Support_Id</Prompts>
+                <NextNode>AT:AT_PRO</NextNode>
+            </Value>
+        </Entry>
+		
+		
+		<Entry>
+            <Key>Issue</Key>
+            <Value>
+                <Prompts bargein="true">Issue</Prompts>
+                <NextNode>AT:AT_PRO</NextNode>
+            </Value>
+        </Entry>
+		
+		
+</DynamicAnn>

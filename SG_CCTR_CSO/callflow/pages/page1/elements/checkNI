@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@1623481832:1692268782955" name="checkNI" version="6.0.1">
+<config>
+<source type="Class">com.dydbs.endpoint.CheckNIorDecision</source>
+</config>
+</decision>

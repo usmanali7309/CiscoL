@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@937859966:1697523461081" name="SmsOrEmail" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="SmsOrEmail" default_exit_state="Email">
+        <exit_state name="Sms" conjugate="and">
+            <string operator="contains">
+                <data>
+                    <element name="FetchCustomerProfile" variable="response_body" />
+                </data>
+                <constant_string value="mojombo" />
+            </string>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

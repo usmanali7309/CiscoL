@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
+<configuration class="com.audium.server.voiceElement.menu.MFoundation3OptionMenu">
+  <setting name="inputmode">both</setting>
+     <audio_group name="initial_audio_group" bargein="true">
+          <audio name="audio item">Welcome to Cisco Live London. </audio>
+          <audio name="audio item">Press 1 for Collaboration sessions,
+                          2 for Security or 3 for Data Centre</audio>
+     </audio_group>
+  <setting name="option1_dtmf">1</setting>
+  <setting name="option1_voice">Collaboration</setting>
+  <setting name="option1_value">collab</setting>
+  <setting name="option2_dtmf">2</setting>
+  <setting name="option2_voice">Security</setting>
+  <setting name="option2_value">sec</setting>
+  <setting name="option3_dtmf">3</setting>
+  <setting name="option3_voice">Data Centre</setting>
+  <setting name="option3_value">data</setting>
+</configuration>

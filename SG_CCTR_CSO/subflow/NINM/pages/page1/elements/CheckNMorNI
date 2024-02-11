@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@217441120:1691732122883" name="CheckNMorNI" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="CheckNMorNI" default_exit_state="NM">
+        <exit_state name="NI" conjugate="and">
+            <string operator="equal">
+                <data>
+                    <session name="NINM" />
+                </data>
+                <constant_string value="NI" />
+            </string>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@237445467:1697089386022" name="CheckRetry" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="CheckRetry" default_exit_state="Exceed">
+        <exit_state name="Loop" conjugate="and">
+            <number operator="less">
+                <data>
+                    <session name="Retry" />
+                </data>
+                <data>
+                    <session name="MaxTry" />
+                </data>
+            </number>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

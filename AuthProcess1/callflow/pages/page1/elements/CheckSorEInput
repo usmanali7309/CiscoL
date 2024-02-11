@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@787341363:1697789126844" name="CheckSorEInput" version="6.0.1">
+<config>
+<source type="Class">com.test.CheckInputRe</source>
+</config>
+</decision>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@1593903048:1697795223528" name="Verifing Otp" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="Verifing Otp" default_exit_state="No">
+        <exit_state name="Yes" conjugate="and">
+            <number operator="equal">
+                <data>
+                    <element name="ApiToCheckOtp" variable="status_code" />
+                </data>
+                <constant_number value="200" />
+            </number>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

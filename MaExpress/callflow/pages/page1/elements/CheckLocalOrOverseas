@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@279256923:1697191826782" name="CheckLocalOrOverseas" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="CheckLocalOrOverseas" default_exit_state="NoNumberRecognized">
+        <exit_state name="Overseas" conjugate="and">
+            <string operator="starts_with">
+                <call_data type="ani" />
+                <constant_string value="+91" />
+            </string>
+        </exit_state>
+        <exit_state name="Local(HK)" conjugate="and">
+            <string operator="starts_with">
+                <call_data type="ani" />
+                <constant_string value="+852" />
+            </string>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

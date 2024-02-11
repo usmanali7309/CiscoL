@@ -1,0 +1,42 @@
+<DynamicMenu>
+	    <Entry>
+            <Key>MM</Key>
+            <Value>
+                <Prompts bargein="true">MAIN_MENU</Prompts>
+                <Grammars>1,2,</Grammars>
+                <NextNode>NM:Sale,NM:Support</NextNode>
+                <MenuID>M001</MenuID>
+				<NoInput>NINM_NOINPUT</NoInput>
+				<NoMatch>NINM_NOMATCH</NoMatch>
+				<MaxTries NextNode="SF:Disconnect">NINM_MAXTRY</MaxTries>         				
+				<Retry>3</Retry>
+            </Value>
+        </Entry>
+		<Entry>
+		    <Key>Sale</Key>
+			<Value>
+			    <Prompts bargein="true">SALE_MENU</Prompts>
+                <Grammars>1,2,</Grammars>
+                <NextNode>AN:Sale_Id,AN:Complain_Id</NextNode>
+                <MenuID>M002</MenuID>
+				<NoInput>NINM_NOINPUT</NoInput>
+				<NoMatch>NINM_NOMATCH</NoMatch>
+				<MaxTries NextNode="SF:Disconnect">NINM_MAXTRY</MaxTries>         				
+				<Retry>3</Retry>
+			</Value>
+		</Entry>
+		<Entry>
+		    <Key>Support</Key>
+			<Value>
+			    <Prompts bargein="true">SUPPORT_MENU</Prompts>
+                <Grammars>1,2,</Grammars>
+                <NextNode>AN:Support_Id,AN:Issue</NextNode>
+                <MenuID>M003</MenuID>
+				<NoInput>NINM_NOINPUT</NoInput>
+				<NoMatch>NINM_NOMATCH</NoMatch>
+				<MaxTries NextNode="SF:Disconnect">NINM_MAXTRY</MaxTries>         				
+				<Retry>3</Retry>
+			</Value>
+			</Entry>
+</DynamicMenu>		
+		

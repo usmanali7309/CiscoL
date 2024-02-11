@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@1215520619:1697519253877" name="CheckRecord" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="CheckRecord" default_exit_state="NotFound">
+        <exit_state name="Found" conjugate="and">
+            <number operator="equal">
+                <data>
+                    <element name="FetchCustomerProfile" variable="status_code" />
+                </data>
+                <constant_number value="200" />
+            </number>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

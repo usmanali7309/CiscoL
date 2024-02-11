@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@1566914250:1697697968705" name="checkInput2" version="6.0.1">
+<config>
+<source type="Class">com.test.CheckOtp2</source>
+</config>
+</decision>

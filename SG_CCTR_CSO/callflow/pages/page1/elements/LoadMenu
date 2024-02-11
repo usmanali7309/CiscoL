@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action id="Element@778652062:1692170354971" name="LoadMenu" version="6.0.1">
+<config>
+<source type="Class">com.dydbs.endpoint.LoadMenu</source>
+</config>
+</action>

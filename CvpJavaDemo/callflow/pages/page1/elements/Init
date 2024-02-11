@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@988663847:1697104490458" name="Init" version="6.0.1">
+<config>
+<settings>
+<setting name="maintainer"/>
+<setting name="language"/>
+<setting name="voice_name"/>
+<setting name="encoding"/>
+<setting name="default_audio_path"/>
+<setting name="remove_session_data"/>
+</settings>
+<session_data>
+<data create_when="Before" name="retry">0</data>
+<data create_when="Before" name="maxTries">3</data>
+<data create_when="Before" name="nextNode">NM</data>
+<data create_when="Before" name="nextKey">MM</data>
+<data create_when="Before" name="LangSelect">{Data.Element.LangSel.value}</data>
+</session_data>
+</config>
+</action_element>

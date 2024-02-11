@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@1347332531:1696925501945" name="Decision_02" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule name="Decision_02" default_exit_state="maxCount">
+        <exit_state name="noInput" conjugate="and">
+            <number operator="less">
+                <data>
+                    <session name="count" />
+                </data>
+                <constant_number value="2" />
+            </number>
+        </exit_state>
+    </rule>
+</knowledge_base>]]></source>
+</config>
+</decision>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<connector id="Element@1214792799:1697089346589" name="Call_01" version="6.0.1">
+<subflow_call subflow_name="NINM" target="Element@31:1697090483665">
+<config>
+<input_data>
+<data name="Retry"/>
+</input_data>
+</config>
+</subflow_call>
+</connector>

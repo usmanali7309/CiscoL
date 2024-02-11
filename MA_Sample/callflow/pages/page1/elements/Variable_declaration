@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@549051475:1694444475327" name="Variable_declaration" version="6.0.1">
+<config>
+<settings>
+<setting name="maintainer"/>
+<setting name="language"/>
+<setting name="voice_name"/>
+<setting name="encoding"/>
+<setting name="default_audio_path"/>
+<setting name="remove_session_data"/>
+</settings>
+<session_data>
+<data create_when="Before" name="AccNo">12345</data>
+<data create_when="Before" name="noMatchPrompt"> </data>
+<data create_when="Before" name="noInpPrompt"> </data>
+<data create_when="Before" name="maxTries"> </data>
+<data create_when="Before" name="retry">0</data>
+<data create_when="Before" name="nextNode">NM</data>
+<data create_when="Before" name="nextKey">MM</data>
+<data create_when="Before" name="dbJNDIResName">MaExp</data>
+<data create_when="Before" name="voice"> </data>
+</session_data>
+</config>
+</action_element>

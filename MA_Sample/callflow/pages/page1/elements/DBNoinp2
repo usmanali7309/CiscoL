@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@1406422650:1695216507735" name="DBNoinp2" version="6.0.1">
+<config>
+<settings>
+<setting name="type">insert</setting>
+<setting name="jndiName">{Data.Session.MaExp}</setting>
+<setting name="query">insert into MaTable (Inputs) values ('NoIn')</setting>
+<setting name="enableXmlResultSet">true</setting>
+<setting name="maxRowsInXML">50</setting>
+</settings>
+</config>
+</action_element>

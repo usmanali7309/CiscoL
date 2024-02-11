@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@618371666:1697519162886" name="FetchCustomerProfile" version="6.0.1">
+<config>
+<settings>
+<setting name="EndpointURL">https://api.github.com/users/mojombo</setting>
+<setting name="HTTPMethod">GET</setting>
+<setting name="Parameters"/>
+<setting name="ignoreCertificateValidation">true</setting>
+<setting name="requireHttpAuthentication">false</setting>
+<setting name="headers"/>
+<setting name="useProxy">false</setting>
+<setting name="xpathexpression"/>
+<setting name="connectTimeout">3000</setting>
+<setting name="readTimeout">5000</setting>
+</settings>
+</config>
+</action_element>

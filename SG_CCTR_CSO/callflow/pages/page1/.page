@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@388413876:1690964893650" name="page1" version="6.0.1">
+<element height="55" id="Element@320421647:1690964893650" name="Start Of Call" start_of_call="true" type="Page Entry" width="144" x="474" y="-30">
+<exit_states>
+<exit_state name="next" target="Element@1844872524:1692179094207"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1413875243:1691135181805" name="CSO_Menu" src="com.audium.server.voiceElement.form.MFoundationForm" type="Voice Element" width="147" x="468" y="527">
+<exit_states>
+<exit_state name="done" target="Element@2097525231:1692169002403"/>
+<exit_state name="max_nomatch" target="Element@1825556251:1692170001798"/>
+<exit_state name="max_noinput" target="Element@1623481832:1692268782955"/>
+</exit_states>
+</element>
+<element height="55" id="Element@695964506:1691732159250" name="NINM_CSO" type="Subflow Call" width="139" x="893" y="440">
+<subflow_call subflow_name="NINM" target="Element@31:1691732162034">
+<config>
+<input_data>
+<data name="retry"/>
+</input_data>
+</config>
+</subflow_call>
+<exit_states>
+<exit_state name="next" target="Element@1413875243:1691135181805"/>
+</exit_states>
+</element>
+<element height="55" id="Element@2097525231:1692169002403" name="CheckGrammar" type="Decision" width="171" x="462" y="627">
+<exit_states>
+<exit_state name="Success" target="Element@415046985:1692178151407">
+<bendpoint>
+<dim1 x="-262" y="1"/>
+<dim2 x="-260" y="462"/>
+</bendpoint>
+<bendpoint>
+<dim1 x="-260" y="-175"/>
+<dim2 x="-258" y="286"/>
+</bendpoint>
+<bendpoint>
+<dim1 x="-261" y="-369"/>
+<dim2 x="-259" y="92"/>
+</bendpoint>
+</exit_state>
+<exit_state name="Failure" target="Element@1825556251:1692170001798"/>
+</exit_states>
+</element>
+<element height="55" id="Element@2011902530:1692169024980" name="DB_CS_Insert_NI" src="com.audium.server.action.database.DatabaseAction" type="Action Element" width="177" x="874" y="347">
+<exit_states>
+<exit_state name="done" target="Element@695964506:1691732159250"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1825556251:1692170001798" name="DB_CSO_InsertNM" src="com.audium.server.action.database.DatabaseAction" type="Action Element" width="195" x="865" y="579">
+<exit_states>
+<exit_state name="done" target="Element@695964506:1691732159250"/>
+</exit_states>
+</element>
+<element height="55" id="Element@778652062:1692170354971" name="LoadMenu" type="Action" width="134" x="479" y="273">
+<exit_states>
+<exit_state name="done" target="Element@1413875243:1691135181805">
+<bendpoint>
+<dim1 x="157" y="121"/>
+<dim2 x="162" y="-132"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="55" id="Element@415046985:1692178151407" name="CheckNextNode" type="Decision" width="177" x="457" y="166">
+<exit_states>
+<exit_state name="NM" target="Element@778652062:1692170354971"/>
+<exit_state name="AN" target="Element@1986799253:1692262880875"/>
+<exit_state name="AT" target="Element@1750012539:1692268474401"/>
+<exit_state name="DC" target="Element@563420395:1692268750170"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1844872524:1692179094207" name="Init" src="com.audium.server.action.context.ApplicationModifier" type="Action Element" width="75" x="508" y="73">
+<exit_states>
+<exit_state name="done" target="Element@415046985:1692178151407"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1876977716:1692182133514" name="CSO_Ann" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="124" x="900" y="75">
+<exit_states>
+<exit_state name="done" target="Element@415046985:1692178151407"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1986799253:1692262880875" name="LoadAnn" type="Action" width="121" x="902" y="177">
+<exit_states>
+<exit_state name="done" target="Element@1876977716:1692182133514"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1750012539:1692268474401" name="AgentTransfer" src="com.audium.server.voiceElement.internal.CiscoSubdialogReturnElement" type="Subdialog Return" width="183" x="56" y="161">
+<exit_states>
+<exit_state name="done"/>
+</exit_states>
+</element>
+<element height="55" id="Element@563420395:1692268750170" name="Disconnect" src="com.audium.server.voiceElement.internal.CiscoSubdialogReturnElement" type="Subdialog Return" width="137" x="894" y="260">
+<exit_states>
+<exit_state name="done"/>
+</exit_states>
+</element>
+<element height="55" id="Element@1623481832:1692268782955" name="checkNI" type="Decision" width="112" x="488" y="379">
+<exit_states>
+<exit_state name="NI" target="Element@2011902530:1692169024980"/>
+<exit_state name="Decision" target="Element@415046985:1692178151407">
+<bendpoint>
+<dim1 x="-175" y="-92"/>
+<dim2 x="-176" y="121"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+</page>
